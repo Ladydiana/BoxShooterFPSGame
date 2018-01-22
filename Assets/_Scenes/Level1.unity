@@ -269,7 +269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4982285421283810, guid: 29b01fadde9dc5d4899e32ca18531bea, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29b01fadde9dc5d4899e32ca18531bea, type: 2}
@@ -421,7 +421,7 @@ Transform:
   - {fileID: 735699}
   - {fileID: 146349672}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &355425963
 Prefab:
@@ -482,6 +482,59 @@ Transform:
   m_PrefabParentObject: {fileID: 4112951316258886, guid: d2c56783d00749749ac6c71039f582a4,
     type: 2}
   m_PrefabInternal: {fileID: 1464015582}
+--- !u!1 &437017303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 437017305}
+  - component: {fileID: 437017304}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &437017304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437017303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d30487acfc0439b99b3ac25524dc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  canBeatLevel: 0
+  beatLevelScore: 0
+  startTime: 5
+  mainScoreDisplay: {fileID: 1899781843}
+  mainTimerDisplay: {fileID: 1241834744}
+  gameOverScoreOutline: {fileID: 1876678479}
+  musicAudioSource: {fileID: 1210327630}
+  gameIsOver: 0
+  playAgainButtons: {fileID: 0}
+  playAgainLevelToLoad: 
+  nextLevelButtons: {fileID: 0}
+  nextLevelToLoad: 
+--- !u!4 &437017305
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437017303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468311588
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &532375671
 Prefab:
@@ -997,7 +1050,7 @@ Transform:
   - {fileID: 1987851729}
   - {fileID: 400945894}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1050772216
 GameObject:
@@ -1028,7 +1081,7 @@ Transform:
   - {fileID: 544535753}
   - {fileID: 1331337075}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1115977822 stripped
 Transform:
@@ -1137,6 +1190,11 @@ Prefab:
       propertyPath: motionState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114776514719621762, guid: d2c56783d00749749ac6c71039f582a4,
+        type: 2}
+      propertyPath: scoreAmount
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2c56783d00749749ac6c71039f582a4, type: 2}
   m_IsPrefabParent: 0
@@ -1209,6 +1267,11 @@ MonoBehaviour:
   projectile: {fileID: 1049665166945940, guid: 6f258529e0953f2419dbec744df85220, type: 2}
   power: 100
   shootSFX: {fileID: 8300000, guid: c96ad3bbb7e994ae782d9a1f782e4d9b, type: 3}
+--- !u!82 &1210327630 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82938136435480566, guid: 29b01fadde9dc5d4899e32ca18531bea,
+    type: 2}
+  m_PrefabInternal: {fileID: 45327708}
 --- !u!1 &1241834742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1522,11 @@ Prefab:
       propertyPath: m_Name
       value: Target (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114776514719621762, guid: d2c56783d00749749ac6c71039f582a4,
+        type: 2}
+      propertyPath: scoreAmount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2c56783d00749749ac6c71039f582a4, type: 2}
   m_IsPrefabParent: 0
@@ -1505,6 +1573,11 @@ Prefab:
         type: 2}
       propertyPath: motionState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114776514719621762, guid: d2c56783d00749749ac6c71039f582a4,
+        type: 2}
+      propertyPath: timeAmount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2c56783d00749749ac6c71039f582a4, type: 2}
@@ -1598,7 +1671,7 @@ RectTransform:
   - {fileID: 26017296}
   - {fileID: 1241834743}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
