@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33725314729848050}
   - component: {fileID: 65974810180004690}
   - component: {fileID: 23193718109095562}
-  - component: {fileID: 114042348493537504}
   - component: {fileID: 114141884832783656}
   - component: {fileID: 114776514719621762}
   m_Layer: 0
@@ -96,21 +95,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114042348493537504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1976287069137676}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5caeef4b04d5e77459b215aed2c4102c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 180
-  motionMagnitude: 0.1
-  doSpin: 1
-  doMotion: 0
 --- !u!114 &114141884832783656
 MonoBehaviour:
   m_ObjectHideFlags: 1
