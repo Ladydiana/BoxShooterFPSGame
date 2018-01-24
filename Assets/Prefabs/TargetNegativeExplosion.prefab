@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 82585210070387252}
   - component: {fileID: 114073884681778700}
   m_Layer: 0
-  m_Name: TargetNegativeExplosion 1
+  m_Name: TargetNegativeExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
